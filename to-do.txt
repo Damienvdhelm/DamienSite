@@ -1,0 +1,2 @@
+- add a favicon
+- add some images?
