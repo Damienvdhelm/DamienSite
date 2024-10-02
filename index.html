@@ -26,6 +26,9 @@
         <nav class="sidenav">
             <ul>
                 <li>
+                    <button id="settingsBtn" class="row"><i class="fa-solid fa-gear"></i> Settings</button>
+                </li>
+                <li>
                     <div class="row"><a href="index.html"><i class="fa-solid fa-house"></i>Home</a></div>
                 </li>
                 <li>
@@ -35,28 +38,36 @@
                     <div class="row"><a href="about.html"><i class="fa-regular fa-address-card"></i>About</a></div>
                 </li>
             </ul>
+
+            <!-- Modal Structure -->
+            <div id="settingsModal" class="modal">
+                <div class="modal-content">
+                    <span id="closeBtn" class="close-btn">&times;</span>
+                    <h2>Settings</h2>
+                    <p>Light / Dark mode toggle</p>
+                    <button onclick="toggleTheme()">Click me</button>
+                </div>
+            </div>
         </nav>
 
         <div class="main-content">
-
-
-            <!-- Buttons -->
-
+            <!-- Your main content -->
             <div class="intro">
-
                 <h2>Welkom op de homepage van Damien van der Helm</h2>
                 <div class="intro-buttons">
                     <div class="intro1">
                         <button onclick="window.location.href='contact.html'">contact</button>
-                        <p><i class="fa-solid fa-arrow-right"></i>Neem contact met mij op voor vragen of verzoeken.<i class="fa-solid fa-arrow-left"></i></i></p>
+                        <p><i class="fa-solid fa-arrow-right"></i>Neem contact met mij op voor vragen of verzoeken.<i
+                                class="fa-solid fa-arrow-left"></i></p>
                     </div>
                     <div class="intro2">
                         <button onclick="window.location.href='about.html'">about</button>
-                        <p><i class="fa-solid fa-arrow-right"></i>Ontdek meer over wie ik ben en mijn achtergrond.<i class="fa-solid fa-arrow-left"></i></p>
+                        <p><i class="fa-solid fa-arrow-right"></i>Ontdek meer over wie ik ben en mijn achtergrond.<i
+                                class="fa-solid fa-arrow-left"></i></p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 
     <footer>
@@ -64,3 +75,40 @@
     </footer>
 
 </body>
+
+
+<script>
+    const modal = document.getElementById("settingsModal");
+    const settingsBtn = document.getElementById("settingsBtn");
+    const closeBtn = document.getElementById("closeBtn");
+
+    // Open modal
+    settingsBtn.onclick = () => {
+        modal.style.display = "flex";
+    };
+
+    // Close modal
+    closeBtn.onclick = () => {
+        modal.style.display = "none";
+    };
+
+    // Close modal when clicking outside the content
+    window.onclick = (event) => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    };
+
+    const toggleTheme = () => {
+        const currentTheme = document.documentElement.getAttribute("data-theme");
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme);
+    };
+
+    // Load saved theme
+    window.onload = () => {
+        const savedTheme = localStorage.getItem("theme") || "light";
+        document.documentElement.setAttribute("data-theme", savedTheme);
+    };
+</script>

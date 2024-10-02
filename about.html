@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Damien van der Helm's personal website. A 16-year-old Software Development student with skills in HTML, CSS, JavaScript, PHP, and SQL.">
+    <meta name="description"
+        content="Damien van der Helm's personal website. A 16-year-old Software Development student with skills in HTML, CSS, JavaScript, PHP, and SQL.">
     <script src="https://kit.fontawesome.com/b801578fa3.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>Portfolio - Damien van der Helm</title>
@@ -24,6 +25,9 @@
         <nav class="sidenav">
             <ul>
                 <li>
+                    <button id="settingsBtn" class="row"><i class="fa-solid fa-gear"></i> Settings</button>
+                </li>
+                <li>
                     <div class="row"><a href="index.html"><i class="fa-solid fa-house"></i>Home</a></div>
                 </li>
                 <li>
@@ -33,6 +37,16 @@
                     <div class="row"><a href="about.html"><i class="fa-regular fa-address-card"></i>About</a></div>
                 </li>
             </ul>
+
+            <!-- Modal Structure -->
+            <div id="settingsModal" class="modal">
+                <div class="modal-content">
+                    <span id="closeBtn" class="close-btn">&times;</span>
+                    <h2>Settings</h2>
+                    <p>Light / Dark mode toggle</p>
+                    <button onclick="toggleTheme()">Click me</button>
+                </div>
+            </div>
         </nav>
 
         <div class="main-content">
@@ -95,3 +109,39 @@
     </footer>
 
 </body>
+
+<script>
+    const modal = document.getElementById("settingsModal");
+    const settingsBtn = document.getElementById("settingsBtn");
+    const closeBtn = document.getElementById("closeBtn");
+
+    // Open modal
+    settingsBtn.onclick = () => {
+        modal.style.display = "flex";
+    };
+
+    // Close modal
+    closeBtn.onclick = () => {
+        modal.style.display = "none";
+    };
+
+    // Close modal when clicking outside the content
+    window.onclick = (event) => {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    };
+
+    const toggleTheme = () => {
+        const currentTheme = document.documentElement.getAttribute("data-theme");
+        const newTheme = currentTheme === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme);
+    };
+
+    // Load saved theme
+    window.onload = () => {
+        const savedTheme = localStorage.getItem("theme") || "light";
+        document.documentElement.setAttribute("data-theme", savedTheme);
+    };
+</script>
