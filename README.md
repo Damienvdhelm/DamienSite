@@ -22,4 +22,4 @@ what (where)
 
 - details about the commit are visible if you click on the three dots on the right 
 
-- (the website is written in dutch)
+ps: (the website is written in dutch)
