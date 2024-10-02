@@ -4,6 +4,10 @@
     --main-bg-footer: #303c54;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     padding: 0;
