@@ -102,7 +102,7 @@ p {
 
 .main-content button:active {
     background-color: #1a8cff;
-    box-shadow: 0 5px rgb(122, 122, 122);
+    box-shadow: 0 5px rgb(159, 159, 159);
     transform: translateY(4px);
 }
 
