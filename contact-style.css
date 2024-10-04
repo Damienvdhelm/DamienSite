@@ -52,19 +52,8 @@ html, body {
 
 body {
     overflow-y: scroll;
+    overflow-x: hidden;
     position: relative;
-}
-
-body::-webkit-scrollbar {
-    width: 0px;
-}
-
-body {
-    scrollbar-width: none;
-}
-
-body {
-    -ms-overflow-style: none;
 }
 
 header {
@@ -137,7 +126,7 @@ div.row {
 footer {
     background-color: var(--main-bg-footer);
     width: 100%;
-    padding: 1.5em;
+    padding: 0px;
     display: flex;
     justify-content: center;
     justify-content: space-evenly;
