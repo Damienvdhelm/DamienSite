@@ -26,7 +26,6 @@ p {
 }
 
 html, body {
-    overflow-y: hidden;
     height: 100%;
 }
 
@@ -97,6 +96,15 @@ header {
 div.row {
     padding-bottom: 16px;
     padding-top: 16px;
+}
+
+div a {
+    text-decoration: none;
+    color: white;
+}
+
+div a:hover {
+    text-decoration: underline;
 }
 
 .sidenav ul a {
