@@ -1,6 +1,11 @@
-- add some images?
-- add my working experience
-- add some stuff about myself
+- update the contact page
+
+- create a page about my working experience
+
 - keep the website up to date
+
+- add some other stuff about myself
+
 - do something with javascript?
-- 
+
+- add some images?
