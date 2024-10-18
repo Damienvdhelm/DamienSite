@@ -4,6 +4,10 @@
     --main-bg-footer: #303c54;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     padding: 0;
@@ -12,21 +16,19 @@ body {
     flex-direction: column;
     min-height: 100vh;
     overflow-x: hidden;
-}
-
-html {
-    scroll-behavior: smooth;
-}  
-
-html,
-body {
-    height: 100%;
-}
-
-body {
     overflow-y: scroll;
-    overflow-x: hidden;
     position: relative;
+}
+
+p {
+    background-color: #888888;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+html, body {
+    height: 100%;
 }
 
 
@@ -51,6 +53,14 @@ body {
     background-color: #0384c5;
 }
 
+body {
+    scrollbar-width: none;
+}
+
+body {
+    -ms-overflow-style: none;
+}
+
 header {
     display: flex;
     justify-content: center;
@@ -59,66 +69,15 @@ header {
     padding: 1em;
 }
 
-p {
-    font-size: larger;
-}
-
-.intro {
-    background-color: rgb(148, 148, 148);
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-radius: 30px;
-}
-
-/* CSS for buttons in main content */
 .main-content {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
     margin-right: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 30px;
     background-color: #C0C0C0;
     color: white;
-    padding: 20px;
-}
-
-.main-content div {
-    margin-top: 20px;
-}
-
-.main-content button {
-    padding: 25px;
-    font-size: 24px;
-    text-align: center;
-    font-size: xx-large;
-    cursor: pointer;
-    outline: none;
-    color: #fff;
-    background-color: var(--main-bg-header);
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px rgb(215, 215, 215);
-}
-
-.main-content button:hover {
-    background-color: #1a8cff;
-}
-
-.main-content button:active {
-    background-color: #1a8cff;
-    box-shadow: 0 5px rgb(159, 159, 159);
-    transform: translateY(4px);
-}
-
-h2 {
-    font-size: 2em;
-    margin-bottom: 75px;
 }
 
 .container {
@@ -154,6 +113,15 @@ div.row {
     padding-top: 16px;
 }
 
+div a {
+    text-decoration: none;
+    color: white;
+}
+
+div a:hover {
+    text-decoration: underline;
+}
+
 .sidenav ul a {
     color: white;
     padding-bottom: 16px;
@@ -165,8 +133,7 @@ div.row {
     text-decoration: underline;
 }
 
-.fa-solid,
-.fa-regular {
+.fa-solid, .fa-regular {
     margin: 8px;
 }
 
@@ -179,16 +146,6 @@ footer {
     justify-content: space-evenly;
     color: #fff;
     flex-wrap: wrap;
-}
-
-footer p {
-    background-color: #888888;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.intro1, .intro2 {
-    margin-bottom: 50px;
 }
 
 .cv-section {
@@ -206,20 +163,20 @@ footer p {
     margin-bottom: 5px;
 }
 
-.cv-section p {
-    margin: 5px 0;
-}
-
 .cv-section ul {
     list-style-type: disc;
     padding-left: 20px;
+    background-color: #888888;
+    padding: 10px;
+    border-radius: 10px;
+    list-style-type: none;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1023px) {
     .main-content {
         margin-left: 10px;
     }
-
+    
     header h1 {
         font-size: 20px;
         margin: 5px;
