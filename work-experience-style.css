@@ -173,6 +173,10 @@ footer {
 }
 
 @media (max-width: 1023px) {
+    body {
+        overflow-y: scroll;
+    }
+
     .main-content {
         margin-left: 10px;
     }
