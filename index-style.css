@@ -251,4 +251,9 @@ footer p {
         flex-direction: row;
         padding: 10px;
     }
+    
+    div.row {
+        display: flex;
+        justify-content: center;
+    }
 }
