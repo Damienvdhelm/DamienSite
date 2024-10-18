@@ -181,6 +181,12 @@ footer {
     flex-wrap: wrap;
 }
 
+footer p {
+    background-color: #888888;
+    padding: 10px;
+    border-radius: 10px;
+}
+
 .intro1, .intro2 {
     margin-bottom: 50px;
 }
