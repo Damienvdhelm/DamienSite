@@ -9,3 +9,5 @@
 - add some images?
 
 - add some animations with css / learn how to make animations and add them
+
+- order the files in folders
