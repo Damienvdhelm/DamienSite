@@ -162,13 +162,16 @@ footer {
     margin-bottom: 5px;
 }
 
-.cv-section ul {
-    list-style-type: disc;
+.cv-section ol {
     padding-left: 20px;
     background-color: #888888;
     padding: 10px;
     border-radius: 10px;
     list-style-type: none;
+}
+
+.cv-section ol li {
+    margin-bottom: 5px;
 }
 
 @media (max-width: 1023px) {
