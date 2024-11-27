@@ -1,5 +1,3 @@
-## link to the website -> https://damienvdhelm.github.io/DamienSite/ <-
-
 ### commit template
 
 what (where)
